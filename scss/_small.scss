@@ -1,0 +1,100 @@
+/* Prevent adjustments of font size after orientation changes.  */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  height: 100%;
+}
+
+/*---- apply a natural box layout model to all elements -------*/
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  height: 100%;
+  font-family: $defaultFont;
+  font-weight: $normalWeight;
+  color: $fontcolor;
+}
+.headerWrapper {
+  background-color: $greyColor;
+  color: $primaryColor;
+}
+header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 1rem $gutter;
+  gap: 8px;
+  h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: $normalWeight;
+    align-self: flex-start;
+  }
+}
+
+//nav
+.navWrapper {
+  background-color: $primaryColor;
+}
+nav {
+  ul {
+    padding: 0;
+    margin: 0 $gutter;
+  }
+  ul li {
+    list-style-type: none;
+  }
+  ul li a {
+    color: $fontcolor;
+    text-decoration: none;
+    display: block;
+    padding: 0.8rem $gutter;
+  }
+  ul li.active a {
+    background-color: rgba($color: #ffffffff, $alpha: 0.8);
+    color: $primaryColor;
+    border-radius: 10px;
+  }
+}
+//main
+.hero img {
+  width: 100%;
+  height: auto;
+}
+h1 {
+  margin: 0;
+  padding: 1rem $gutter;
+}
+video{
+  width: 90%;
+  margin-left: 5%;
+}
+details{
+  margin: .5rem $gutter;
+  summary{
+    background-color: $secondaryColor;
+    border-radius: 8px;
+    padding: .5rem;
+  }
+  p{
+    background-color: $greyColor;
+    padding: .5rem;
+  }
+}
+
+//footer
+.footerWrapper {
+  background-color: $greyColor;
+}
+footer {
+  padding: 0.5rem $gutter;
+  p {
+    margin: 0;
+    font-weight: $lightWeight;
+    text-align: center;
+  }
+}
